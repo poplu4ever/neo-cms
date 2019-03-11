@@ -1,0 +1,8 @@
+{
+  "name": "neo-cms",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/poplu4ever/neo-cms.git",
+  "author": "jiexinglu <lujiexing66@sina.com>",
+  "license": "MIT"
+}
