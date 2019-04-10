@@ -61,7 +61,7 @@ h4 {
 p {
     font-size:16px;
     line-height:25px;
-    padding-top:20px;
+    /*padding-top:20px;*/
 }
 .panel{
     border-radius:0px;
@@ -384,7 +384,7 @@ footer p{
 }
 .top-navbar .dropdown-menu{
     min-width: 230px;
-    top:98%;
+    top:96%;
     border-radius: 0 0 4px 4px;
 }
 
