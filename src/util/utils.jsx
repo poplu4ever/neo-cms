@@ -68,6 +68,12 @@ class Utils{
     removeStorage(name){
         window.localStorage.removeItem(name);
     }
+
+
+    successTips(successMsg){
+        alert(successMsg || '操作成功');
+
+    }
 }
 
 export default Utils;

@@ -4,6 +4,8 @@ import Pagination           from '../../util/pagination/index.jsx';
 import {Link}               from 'react-router-dom';
 import User                 from "../../service/user-service.jsx";
 import Util                 from "../../util/utils.jsx";
+import TableList            from "../../util/table-list/index.jsx";
+
 
 
 const _user = new User();
@@ -30,6 +32,8 @@ class UserList extends Component{
                     firstLoading:false
                 })
             });
+            // console.log('查看res',res);
+            // console.log('查看state',this.state);
         },errMsg =>{
             this.setState({
                 list: []
@@ -68,30 +72,12 @@ class UserList extends Component{
             </tr>
         );
 
-        let tableBody = this.state.list.length > 0 ? listBody : listError;
-
-
         return(
             <div id="page-wrapper">
                 <PageTitle title='用户列表'/>
-                <div className='row'>
-                    <div className='col-md-12'>
-                        <table className='table table-striped table-bordered'>
-                            <thead>
-                                <tr>
-                                    <th>ID</th>
-                                    <th>用户名</th>
-                                    <th>邮箱</th>
-                                    <th>电话</th>
-                                    <th>注册时间</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                {tableBody}
-                            </tbody>
-                        </table>
-                    </div>
-                </div>
+                <TableList tableHeads={['ID','用户名','邮箱','电话','注册时间']}>
+                    {listBody}
+                </TableList>
                 <Pagination current={this.state.pageNum} total={this.state.total}
                             onChange={pageNumber => this.onPageNumChange(pageNumber)}/>
             </div>
