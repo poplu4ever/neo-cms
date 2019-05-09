@@ -23,7 +23,6 @@ class CategorySelector extends React.Component{
         this.loadFirstCategory();
     }
 
-
     componentWillReceiveProps(nextProps) {
         let categoryIdChange        = this.props.categoryId       !== nextProps.categoryId,
             parentCategoryIdChange  = this.props.parentCategoryId !== nextProps.parentCategoryId;

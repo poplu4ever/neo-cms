@@ -57,8 +57,6 @@ class ProductSave extends React.Component{
     }
 
     onCategoryChange(categoryId,parentCategoryId){
-        // console.log("categoryId",categoryId);
-        // console.log("parentCategoryId",parentCategoryId);
         this.setState({
             categoryId,
             parentCategoryId
@@ -143,7 +141,7 @@ class ProductSave extends React.Component{
 
         return(
             <div id="page-wrapper">
-                <PageTitle title="添加商品"/>
+                <PageTitle title={this.state.id ? '编辑商品': '添加商品'}/>
                 <div className="form-horizontal">
                     <div className="form-group">
                         <label className="col-md-2 control-label">商品名称</label>

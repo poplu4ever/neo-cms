@@ -31,7 +31,6 @@ class TableList extends React.Component{
         );
 
         let listBody = this.props.children;
-            console.log("列表内容",listBody);
         //列表内容
 
         let listInfo = (
